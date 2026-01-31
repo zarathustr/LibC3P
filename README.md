@@ -111,7 +111,7 @@ We provide standard datasets for validating multiple practical $C^3Ps$, collecte
 
 ------
 
-## Citation 
+## Citation
 
 If you find this work useful for your research, please cite our paper:
 
