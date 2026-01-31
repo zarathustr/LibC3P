@@ -115,8 +115,6 @@ We provide standard datasets for validating multiple practical $C^3Ps$, collecte
 
 If you find this work useful for your research, please cite our paper:
 
-代码段
-
 ```bash
 @article{wu2024generalized,
   title={Simultaneous Closed-Chain Calibration: Generalized Optimization, Global Solutions and Applications},
