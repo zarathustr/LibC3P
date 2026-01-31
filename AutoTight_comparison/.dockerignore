@@ -1,0 +1,13 @@
+.git
+.pytest_cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+_results_*
+solve_mosek.ptf
+
+_conda
+.conda
+

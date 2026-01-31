@@ -1,0 +1,8 @@
+/venv
+.ipynb_checkpoints/
+__pycache__/
+*.code-workspace
+*.vscode/
+
+*.ipynb
+*.egg-info/
