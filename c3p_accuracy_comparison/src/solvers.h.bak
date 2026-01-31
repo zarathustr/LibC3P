@@ -1,0 +1,64 @@
+#pragma once
+
+#include <tuple>
+#include <utility>
+
+#include "problems.h"
+
+namespace pem {
+
+// =============================================================
+// Baseline solvers used in Monte-Carlo benchmarks.
+//
+// Naming follows the papers requested by the user.
+//
+//   AX = XB
+//     Park1994 (10.1109/70.326576)
+//     Horaud1995 (10.1177/027836499501400301)
+//     Daniilidis1999 (10.1177/02783649922066213)
+//     Zhang2017 (10.1007/s11548-017-1646-x)
+//
+//   AX = YB
+//     Dornaika1998 (10.1109/70.704233)
+//     Shah2013 (10.1115/1.4024473)
+//     Park2016TIE (10.1109/TIE.2015.2505690)
+//     Tabb2017 (10.1007/s00138-017-0841-7)
+//
+//   AXB = YCZ
+//     Wu2016TRO (10.1109/TRO.2016.2530079)
+//     Ma2018 (10.1007/s10514-018-9744-3)
+//     Sui2023 (10.1109/TASE.2023.3299969)
+//
+// Notes
+//   - All solvers return orthonormalized SE(3) results.
+//   - PEM solvers use the residuals in problems.cpp and a small
+//     Levenberg–Marquardt routine.
+// =============================================================
+
+// -----------------------------
+// AX = XB
+// -----------------------------
+SE3 solveAXXB_PEM(const AXXBData& data, int restarts = 3);
+SE3 solveAXXB_Park1994(const AXXBData& data);
+SE3 solveAXXB_Horaud1995(const AXXBData& data);
+SE3 solveAXXB_Daniilidis1999(const AXXBData& data);
+SE3 solveAXXB_Zhang2017(const AXXBData& data, int refine_lm_iters = 20);
+
+// -----------------------------
+// AX = YB
+// -----------------------------
+std::pair<SE3, SE3> solveAXYB_PEM(const AXYBData& data, int restarts = 3);
+std::pair<SE3, SE3> solveAXYB_Dornaika1998(const AXYBData& data);
+std::pair<SE3, SE3> solveAXYB_Shah2013(const AXYBData& data);
+std::pair<SE3, SE3> solveAXYB_Park2016TIE(const AXYBData& data, int restarts = 12);
+std::pair<SE3, SE3> solveAXYB_Tabb2017(const AXYBData& data, int refine_lm_iters = 40);
+
+// -----------------------------
+// AXB = YCZ
+// -----------------------------
+std::tuple<SE3, SE3, SE3> solveAXB_YCZ_PEM(const AXB_YCZData& data, int restarts = 3);
+std::tuple<SE3, SE3, SE3> solveAXB_YCZ_Wu2016TRO(const AXB_YCZData& data);
+std::tuple<SE3, SE3, SE3> solveAXB_YCZ_Ma2018(const AXB_YCZData& data, int refine_lm_iters = 60);
+std::tuple<SE3, SE3, SE3> solveAXB_YCZ_Sui2023(const AXB_YCZData& data, int iters = 200);
+
+}  // namespace pem

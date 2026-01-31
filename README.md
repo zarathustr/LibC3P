@@ -119,9 +119,9 @@ If you find this work useful for your research, please cite our paper:
 
 ```bash
 @article{wu2024generalized,
-  title={Generalized Simultaneous Closed-Chain Calibration},
+  title={Simultaneous Closed-Chain Calibration: Generalized Optimization, Global Solutions and Applications},
   author={Wu, Jin and Chen, Xieyuanli and Hu, Xiangcheng and Zhang, Chengxi and Li, Haoang and Jiang, Yi and Ge, Shuzhi Sam and Zhang, Wei and He, Wei},
-  journal={The International Journal of Robotics Research},
+  journal={Submission to The International Journal of Robotics Research},
   year={2026},
   publisher={Arxiv},
   url={[https://github.com/zarathustr/LibC3P](https://github.com/zarathustr/LibC3P)}

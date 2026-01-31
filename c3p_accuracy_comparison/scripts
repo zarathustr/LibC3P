@@ -1,0 +1,3 @@
+./pem_c3p_noise_sweep --P 1 --Q 2 --noise 0.005:0.005:0.02 --mc 200 --N 20 --solver PEM --out c3p_p1q2.csv
+
+make -j8 && ./pem_benchmark_mc --mc 500 --N 20 --noise 0.002,0.005,0.01,0.02,0.05 --out mc_results.csv
