@@ -106,8 +106,10 @@ Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m
 
 We provide standard datasets for validating multiple practical $C^3Ps$, collected using high-precision hardware synchronization.
 
-- `data/plane-aruco-2025071801`: Multi-camera Aruco calibration data.
-- `data/4cam-jetson`: Data from NVidia Jetson NX setup.
+- `plane-aruco-2025071801`: Multi-camera Aruco calibration data.
+- `4cam-jetson`: Data from NVidia Jetson NX setup.
+- `4cam-nuc`: Data from Intel NUC driven 4 camera extrinsic calibration setup.
+- `tencent-robot-datasets`: Industrial-robot calibration in Tencent Robotics X.
 
 ------
 
