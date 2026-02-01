@@ -1,7 +1,7 @@
 # LibC3P: Generalized Simultaneous Closed-Chain Calibration
 
 
-[//]: # (<a href="https://arxiv.org/abs/2509.06285"><img src='https://img.shields.io/badge/arXiv-2509.06285-b31b1b' alt='arXiv'></a>[![video]&#40;https://img.shields.io/badge/Video-Bilibili-74b9ff?logo=bilibili&logoColor=red&#41;]&#40; https://www.bilibili.com/video/BV1jsHQzCEra/?share_source=copy_web&#41;[![C++]&#40;c3p_README/C++-17-green.svg&#41;]&#40;https://isocpp.org/&#41;[[![ROS]&#40;c3p_README/ROS-Melodic%252FNoetic-orange.svg&#41;]&#40;http://wiki.ros.org/&#41;[![GitHub Stars]&#40;https://img.shields.io/github/stars/JokerJohn/DCReg.svg&#41;]&#40;https://github.com/JokerJohn/DCReg/stargazers&#41; [![GitHub Issues]&#40;https://img.shields.io/github/issues/JokerJohn/DCReg.svg&#41;]&#40;https://github.com/JokerJohn/DCReg/issues&#41;)
+[![C++](c3p_README/C++-17-green.svg)](https://isocpp.org/)[[![ROS](c3p_README/ROS-Melodic%252FNoetic-orange.svg)](http://wiki.ros.org/)[![GitHub Stars](https://img.shields.io/github/stars/JokerJohn/DCReg.svg)](https://github.com/zarathustr/LibC3P/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/JokerJohn/DCReg.svg)](https://github.com/zarathustr/LibC3P/issues)
 
 </div>
 
