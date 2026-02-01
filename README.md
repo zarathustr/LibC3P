@@ -72,9 +72,12 @@ cd LibC3P
 ### 2. C++ Build
 
 ```
+cd c3p_accuracy_comparison
 mkdir build && cd build
 cmake ..
 make -j4
+./pem_benchmark_mc --mc 500 --N 20 --noise 0.002,0.005,0.01,0.02,0.05 --out mc_results.csv
+./pem_c3p_noise_sweep --P 1 --Q 2 --noise 0.005:0.005:0.02 --mc 200 --N 20 --solver PEM --out c3p_p1q2.csv
 ```
 
 ### 3. ROS Build
@@ -82,10 +85,19 @@ make -j4
 Copy the package to your catkin workspace `src` folder:
 
 ```
-cp -r LibC3P ~/catkin_ws/src/
+cp -r aruco_extrinsic_calib_C3P ~/catkin_ws/src/
 cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
+
+# For 4cam-large-nuc dataset:
+rosrun aruco_extrinsic_calib_c3p extract_aruco_from_bag --bag 4cam-large-ust-nautilus-native-0000000000-2026-01-01-06-48-53.bag --calib calib-4cam-large/calib-camchain.yaml --out_dir out --num_cams 4 --topics /sensors/cam0,/sensors/cam1,/sensors/cam2,/sensors/cam3 --tag_size 0.25 --dict DICT_6X6_250 --sync_tol 0.01 --image_mode raw
+
+rosrun aruco_extrinsic_calib_c3p verify_extrinsics --calib calib-4cam-large/calib-camchain.yaml --camA_csv out/cam0_aruco_poses.csv --camA_idx 0 --camB_csv out/cam2_aruco_poses.csv --camB_idx 2  --sync_tol 0.01
+
+rosrun aruco_extrinsic_calib_c3p verify_axby_zcwd --calib calib-4cam-large/calib-camchain.yaml --csv_dir out --cam0 0 --marker0 10 --cam1 1 --marker1 12 --cam2 2 --marker2 13 --cam3 3 --marker3 14 --sync_tol 0.01 --tag_size 0.25 --marker_margin 0.01 --out_xyzw out/estimated_XYZW.yaml
+
+rosrun aruco_extrinsic_calib_c3p overlay_reprojection_zcwd_from_bag --bag 4cam-large-ust-nautilus-native-0000000000-2026-01-01-06-48-53.bag --calib calib-4cam-large/calib-camchain.yaml --xyzw_yaml out/estimated_XYZW.yaml --topics /sensors/cam0,/sensors/cam1,/sensors/cam2,/sensors/cam3 --image_mode raw --sync_tol 0.01 --sync_mode ref0 --out_dir out_reproj_zcwd --swap_rb
 ```
 
 ### 4. Running Examples 
