@@ -49,7 +49,7 @@ PEM constructs a "Physical Ensemble" from homogeneous symmetries (e.g., invertin
 <div align="center">
     <img src="c3p_README/pem_opt.jpg" width="100%" alt="PEM Optimization Theory">
     <br>
-    <em>Why physical ensemble enhances global solution of $C^3P$s: Left: Solution space significantly reduces after combining objective candidates in physical ensemble; Right: Rigidity guarantees near $\mathrm{SO}(3)$ enables polynomial-friendly approximation to $\mathrm{SO}(3)$ to the maximum extent.</em>
+    <em>Why physical ensemble enhances global solution of C3Ps: Left: Solution space significantly reduces after combining objective candidates in physical ensemble; Right: Rigidity guarantees near SO(3) enables polynomial-friendly approximation to SO(3) to the maximum extent.</em>
 </div>
 ---
 
