@@ -61,6 +61,7 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 * **C++ Standard:** C++17
 * **ROS:** Melodic / Noetic (for ROS wrappers)
 * **MATLAB:** R2023b (for verification scripts)
+* **Python:** 3.10.19 for comparisons with AutoTight
 * **Dependencies:**
     * Eigen3
     * OpenCV (for PnP solvers)
