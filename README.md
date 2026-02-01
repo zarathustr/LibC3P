@@ -111,11 +111,9 @@ We provide standard datasets for validating multiple practical $C^3Ps$, collecte
 
 ------
 
-## Citation 
+## Citation
 
 If you find this work useful for your research, please cite our paper:
-
-代码段
 
 ```bash
 @article{wu2024generalized,
@@ -132,5 +130,5 @@ If you find this work useful for your research, please cite our paper:
 
 ## Issues
 
-For any questions, please open an issue or contact `wujin@ustb.edu.cn` or `eeweiz@ust.hk`.
+For any questions, please open an issue or contact `wujin@ustb.edu.cn` or `xhubd@connect.ust.hk`.
 
