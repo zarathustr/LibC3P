@@ -1,5 +1,6 @@
 # LibC3P: Generalized Simultaneous Closed-Chain Calibration
 
+Authors: Jin Wu, Xieyuanli Chen, Xiangcheng Hu, Chengxi Zhang, Haoang Li, Yi Jiang, Shuzhi Sam Ge, Wei Zhang, Wei He
 
 [![C++](c3p_README/C++-17-green.svg)](https://isocpp.org/)[[![ROS](c3p_README/ROS-Melodic%252FNoetic-orange.svg)](http://wiki.ros.org/)[![GitHub Stars](https://img.shields.io/github/stars/JokerJohn/DCReg.svg)](https://github.com/zarathustr/LibC3P/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/JokerJohn/DCReg.svg)](https://github.com/zarathustr/LibC3P/issues)
 
