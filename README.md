@@ -46,6 +46,11 @@ This covers scenarios from simple point cloud registration to complex multi-robo
 ### 2. Physical Ensemble Method (PEM)
 PEM constructs a "Physical Ensemble" from homogeneous symmetries (e.g., inverting the chain, cyclic shifts) to constrain the optimization landscape, ensuring convergence to the global optimum.
 
+<div align="center">
+    <img src="c3p_README/pem_opt.jpg" width="100%" alt="PEM Optimization Theory">
+    <br>
+    <em>Why physical ensemble enhances global solution of $C^3P$s: Left: Solution space significantly reduces after combining objective candidates in physical ensemble; Right: Rigidity guarantees near $\mathrm{SO}(3)$ enables polynomial-friendly approximation to $\mathrm{SO}(3)$ to the maximum extent.</em>
+</div>
 ---
 
 ## Prerequisites 
