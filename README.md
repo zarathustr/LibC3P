@@ -41,6 +41,7 @@ This covers scenarios from simple point cloud registration to complex multi-robo
     <br>
     <em>Left: Tri-camera system (AX=YB variants). Right: Multi-sensor setup (AXBY=ZCWD).</em>
 </div>
+
 ### 2. Physical Ensemble Method (PEM)
 PEM constructs a "Physical Ensemble" from homogeneous symmetries (e.g., inverting the chain, cyclic shifts) to constrain the optimization landscape, ensuring convergence to the global optimum.
 
