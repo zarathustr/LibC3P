@@ -112,6 +112,20 @@ rosrun aruco_extrinsic_calib_c3p overlay_reprojection_zcwd_from_bag --bag 4cam-l
 
 Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m` to verify the Cramér-Rao Lower Bound analysis.
 
+**Python Scripts:**
+
+Redirect to `AutoTight_comparison`:
+```
+# Python 3.10.19
+source ~/miniforge3/etc/profile.d/conda.sh
+conda activate constraint_learning
+
+python -m _scripts.run_c3p_se3_axxb_autotight
+python -m _scripts.run_c3p_se3_axyb_autotight
+python -m _scripts.run_c3p_se3_axb_ycz_autotight
+python -m _scripts.run_c3p_se3_axby_zcwd_autotight
+```
+
 ------
 
 ## Datasets
