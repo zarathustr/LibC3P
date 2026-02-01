@@ -10,7 +10,7 @@
 
 ## Introduction
 
-We propose a unified framework for solving **Closed-Chain Calibration Problems ($C^3Ps$)**. This framework generalizes classical problems such as **hand-eye calibration** ($AX=XB$), **robot-world calibration** ($AX=YB$), and extends to high-order problems like $AXB=YCZ$ and the novel $AXBY=ZCWD$ formulation. 
+We propose a unified framework for solving **Closed-Chain Calibration Problems ($C^3Ps$)**. This framework generalizes classical problems such as **hand-eye calibration** ($AX=XB$), **robot-world calibration** ($AX=YB$), and extends to high-order problems like $AXB=YCZ$, the novel simultaneous hand-eye/robot-camera/marker-marker calibration $AXBY=ZCWD$ formulation, the Tri-camera non-overlapping calibration. 
 
 The core contribution is the **Physical Ensemble Method (PEM)**, a globally optimal solver that exploits homogeneous symmetry in closed-chain kinematics to improve robustness and accuracy against measurement noise.
 
@@ -23,6 +23,7 @@ The core contribution is the **Physical Ensemble Method (PEM)**, a globally opti
     * Robot-World-Hand-Eye ($AX=YB$)
     * Simultaneous Hand-Eye/Tool-Flange/Robot-Robot ($AXB=YCZ$)
     * **NEW:** Dual-arm/Multi-sensor non-overlapping calibration ($AXBY=ZCWD$)
+    * **NEW:** Tri-Camera non-overlapping calibration
 * **Multi-Platform Support:** C++, MATLAB, and ROS wrappers.
 
 ---
