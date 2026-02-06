@@ -97,8 +97,8 @@ make -j4
 The results are:
 
 <div align="center">
-    <img src="c3p_README/pem_axbycz_rot_err.png" width="100%" alt="">
-    <img src="c3p_README/pem_axbycz_trans_err.png" width="100%" alt="">
+    <img src="c3p_README/pem_axbycz_rot_err.jpg" width="100%" alt="">
+    <img src="c3p_README/pem_axbycz_trans_err.jpg" width="100%" alt="">
     <br>
     <em>Pose error characteristics of the Physical-Ensemble Method (PEM) for C3Ps.</em>
 </div>
