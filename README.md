@@ -151,12 +151,12 @@ Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m
 Open MATLAB and navigate to the `verification/` folder. Run `Lie_differentiation.m` to verify the differentiation accuracy. Using
 
 $$\frac{\mathrm{d} \ \mathrm{tr} \left( {AX}^k \right)}{\mathrm{d} {X}} = \sum \limits_{i = 0}^{k - 1} {X}^i {A} {X}^{k-i-1}, \ k \in \mathbb{Z}^+$$
-which leads to 
-$$\frac{\mathrm{d}}{\mathrm{d} {\theta}} \mathrm{tr} \left( {A} {\theta}_{\times}^p \right) = \sum \limits_{i = 0}^{p - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {A} {\theta}_{\times}^{p - i - 1}\right)$$
-$$\frac{\mathrm{d}}{\mathrm{d} {\theta}} \mathrm{tr} \left( {A} {\theta}_{\times}^p {B} {\theta}_{\times}^q \right)
-= \sum \limits_{i = 0}^{p - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {B} {\theta}_{\times}^q {A} {\theta}_{\times}^{p - i - 1}\right) + $$
-$$\sum \limits_{i = 0}^{q - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {A} {\theta}_{\times}^p {B} {\theta}_{\times}^{q - i - 1}\right)$$
-etc.
+which leads to
+
+<div align="center">
+    <img src="c3p_README/diff.png" width="70%" alt="">
+    <br>
+</div>
 
 Sample codes:
 ```
