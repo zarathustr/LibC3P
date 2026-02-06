@@ -73,6 +73,9 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 ---
 
 <div align="center">
+    <img src="c3p_README/tri-cam.jpeg" width="40%" alt="">
+    <img src="c3p_README/orthog2.jpg" width="40%" alt="">
+    <br>
     <img src="c3p_README/tri-aruco.png" width="70%" alt="">
     <br>
     <em>Precisely installed calibration patterns for ground-truth verification of calibration parameters.</em>
