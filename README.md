@@ -39,7 +39,7 @@ This covers scenarios from simple point cloud registration to complex multi-robo
 
 <div align="center">
     <img src="c3p_README/image-20260123152314904.png" width="40%" alt="Tri-camera Setup">
-    <img src="c3p_README/cam_calib.jpg" width="42%" alt="General Calibration">
+    <img src="c3p_README/cam_calib.jpg" width="44%" alt="General Calibration">
     <br>
     <img src="c3p_README/image-20260123152029998.png" width="80%" alt="AXBY=ZCWD Setup">
     <br>
