@@ -70,7 +70,7 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 
 ---
 
-## Build & Run 
+## C++/ROS Build & Run 
 
 ### 1. Clone the repository 
 ```bash
@@ -117,9 +117,64 @@ rosrun aruco_extrinsic_calib_c3p overlay_reprojection_zcwd_from_bag --bag 4cam-l
 ./build/simulation_4cam_pose
 ```
 
-**MATLAB Scripts:**
+## MATLAB Scripts:
 
-Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m` to verify the Cramér-Rao Lower Bound analysis.
+### Cramér-Rao Lower Bound (CRLB)
+Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m` to verify the CRLB analysis.
+
+<div align="center">
+    <img src="c3p_README/cov_crlb.jpg" width="100%" alt="CRLB">
+    <br>
+    <em>The covariance estimation from Monte-Carlo tests and CRLB respectively.</em>
+</div>
+
+### Symbolic High-Order Lie-Group Differentiation
+Open MATLAB and navigate to the `verification/` folder. Run `Lie_differentiation.m` to verify the differentiation accuracy. Using
+
+$$\frac{\mathrm{d} \ \mathrm{tr} \left( {AX}^k \right)}{\mathrm{d} {X}} = \sum \limits_{i = 0}^{k - 1} {X}^i {A} {X}^{k-i-1}, \ k \in \mathbb{Z}^+$$
+which leads to 
+$$\frac{\mathrm{d}}{\mathrm{d} {\theta}} \mathrm{tr} \left( {A} {\theta}_{\times}^p \right) = \sum \limits_{i = 0}^{p - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {A} {\theta}_{\times}^{p - i - 1}\right)$$
+$$\frac{\mathrm{d}}{\mathrm{d} {\theta}} \mathrm{tr} \left( {A} {\theta}_{\times}^p {B} {\theta}_{\times}^q \right)
+= \sum \limits_{i = 0}^{p - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {B} {\theta}_{\times}^q {A} {\theta}_{\times}^{p - i - 1}\right) + \sum \limits_{i = 0}^{q - 1} {\mathcal{Z}} \left( {\theta}_{\times}^i {A} {\theta}_{\times}^p {B} {\theta}_{\times}^{q - i - 1}\right)$$
+etc.
+
+Sample codes:
+```
+HHHH = jacobian(trace(A * S^p * B * S^q), r);
+JJJJ1 = zeros(len, 1);
+for i = 0 : p - 1
+    KKK = Z_func(eval(S^i * B * S^q * A * S^(p - i - 1)), dim);
+    JJJJ1 = JJJJ1 + KKK;
+end
+JJJJ2 = zeros(len, 1);
+for i = 0 : q - 1
+    KKK = Z_func(eval(S^i * A * S^p * B * S^(q - i - 1)), dim);
+    JJJJ2 = JJJJ2 + KKK;
+end
+eval(HHHH - JJJJ1.' - JJJJ2.')
+
+
+HHHH = jacobian(trace(A * S^p * B * S^q * C * S^rr), r);
+JJJJ1 = zeros(len, 1);
+for i = 0 : p - 1
+    KKK = Z_func(eval(S^i * B * S^q * C * S^rr * A * S^(p - i - 1)), dim);
+    JJJJ1 = JJJJ1 + KKK;
+end
+JJJJ2 = zeros(len, 1);
+for i = 0 : q - 1
+    KKK = Z_func(eval(S^i * C * S^rr * A * S^p * B * S^(q - i - 1)), dim);
+    JJJJ2 = JJJJ2 + KKK;
+end
+JJJJ3 = zeros(len, 1);
+for i = 0 : rr - 1
+    KKK = Z_func(eval(S^i * A * S^p * B * S^q * C * S^(rr - i - 1)), dim);
+    JJJJ3 = JJJJ3 + KKK;
+end
+eval(HHHH - JJJJ1.' - JJJJ2.' - JJJJ3.')
+```
+------
+
+## Python Comparisons with ${AutoTight}$
 
 **Python Scripts:**
 
@@ -134,8 +189,31 @@ python -m _scripts.run_c3p_se3_axyb_autotight
 python -m _scripts.run_c3p_se3_axb_ycz_autotight
 python -m _scripts.run_c3p_se3_axby_zcwd_autotight
 ```
+## Logs:
+
+```
+
+```
 
 ------
+
+## Simulation of Multi-Camera System
+This repo does not rely on ROS system but will output rosbag file accordingly. Enter `simulation_4cam_pose`:
+```angular2html
+mkdir build
+cd build
+cmake ..
+make -j8
+
+./simulation_4cam_pose ./marker1.svg ./marker2.svg ./marker3.svg out2
+```
+You have to provide the `marker1.svg`, `marker2.svg`, `marker3.svg` for generation of the orthogonal calibration pattern.
+
+<div align="center">
+    <img src="c3p_README/sim_4cam.jpg" width="100%" alt="4cam">
+    <br>
+    <em>The rosbag topics generated using synthetic motion and calibration pattern SVG files.</em>
+</div>
 
 ## Datasets
 
