@@ -214,6 +214,10 @@ python -m _scripts.run_c3p_se3_axby_zcwd_autotight
 
 ```
 
+## Conclusion:
+
+$AutoTight$ will fail for $$AXBY = ZCWD$$ problems.
+
 ------
 
 ## Simulation of Multi-Camera System
