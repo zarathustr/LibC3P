@@ -25,7 +25,7 @@ The core contribution is the **Physical Ensemble Method (PEM)**, a globally opti
     * Simultaneous Hand-Eye/Tool-Flange/Robot-Robot ($AXB=YCZ$)
     * **NEW:** Dual-arm/Multi-sensor non-overlapping calibration ($AXBY=ZCWD$)
     * **NEW:** Tri-Camera non-overlapping calibration
-* **Multi-Platform Support:** C++, MATLAB, and ROS wrappers.
+* **Multi-Platform Support:** C++, MATLAB, Python and ROS wrappers.
 
 ---
 
@@ -67,6 +67,7 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 * **Dependencies:**
     * Eigen3
     * OpenCV (for PnP solvers)
+    * Amardillo (for optimizers)
     * [GTSAM](https://gtsam.org/) (optional, for factor graph comparison)
     * [Manopt](https://www.manopt.org/) (optional, for Riemannian optimization comparisons)
 
