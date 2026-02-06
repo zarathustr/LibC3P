@@ -85,7 +85,7 @@ cd LibC3P
 ```
 
 ### 2. C++ Build
-
+For accuracy characteristics of PEM solver for C3P, use the following commands:
 ```
 cd c3p_accuracy_comparison
 mkdir build && cd build
@@ -94,6 +94,14 @@ make -j4
 ./pem_benchmark_mc --mc 500 --N 20 --noise 0.002,0.005,0.01,0.02,0.05 --out mc_results.csv
 ./pem_c3p_noise_sweep --P 1 --Q 2 --noise 0.005:0.005:0.02 --mc 200 --N 20 --solver PEM --out c3p_p1q2.csv
 ```
+The results are:
+
+<div align="center">
+    <img src="c3p_README/pem_axbycz_rot_err.png" width="100%" alt="">
+    <img src="c3p_README/pem_axbycz_trans_err.png" width="100%" alt="">
+    <br>
+    <em>Pose error characteristics of the Physical-Ensemble Method (PEM) for C3Ps.</em>
+</div>
 
 ### 3. ROS Build
 
@@ -115,13 +123,6 @@ rosrun aruco_extrinsic_calib_c3p verify_axby_zcwd --calib calib-4cam-large/calib
 rosrun aruco_extrinsic_calib_c3p overlay_reprojection_zcwd_from_bag --bag 4cam-large-ust-nautilus-native-0000000000-2026-01-01-06-48-53.bag --calib calib-4cam-large/calib-camchain.yaml --xyzw_yaml out/estimated_XYZW.yaml --topics /sensors/cam0,/sensors/cam1,/sensors/cam2,/sensors/cam3 --image_mode raw --sync_tol 0.01 --sync_mode ref0 --out_dir out_reproj_zcwd --swap_rb
 ```
 
-### 4. Running Examples 
-
-**C++ Simulation:**
-
-```
-./build/simulation_4cam_pose
-```
 
 ## MATLAB Scripts:
 
