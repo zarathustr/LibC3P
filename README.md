@@ -70,6 +70,12 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 
 ---
 
+<div align="center">
+    <img src="c3p_README/tri_aruco.png" width="100%" alt="">
+    <br>
+    <em>Precisely installed calibration patterns for ground-truth verification of calibration parameters.</em>
+</div>
+
 ## C++/ROS Build & Run 
 
 ### 1. Clone the repository 
@@ -210,7 +216,7 @@ make -j8
 You have to provide the `marker1.svg`, `marker2.svg`, `marker3.svg` for generation of the orthogonal calibration pattern.
 
 <div align="center">
-    <img src="c3p_README/sim_4cam.jpg" width="100%" alt="4cam">
+    <img src="c3p_README/sim_4cam.png" width="100%" alt="4cam">
     <br>
     <em>The rosbag topics generated using synthetic motion and calibration pattern SVG files.</em>
 </div>
