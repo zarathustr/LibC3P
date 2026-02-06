@@ -234,6 +234,8 @@ You have to provide the `marker1.svg`, `marker2.svg`, `marker3.svg` for generati
     <em>The rosbag topics generated using synthetic motion and calibration pattern SVG files.</em>
 </div>
 
+Then, the generated rosbag file could be feed to `aruco_extrinsic_calib_c3p` ROS package for synthetic study.
+
 ## Datasets
 
 We provide standard datasets for validating multiple practical $C^3Ps$, collected using high-precision hardware synchronization.
