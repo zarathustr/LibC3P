@@ -148,13 +148,11 @@ Open MATLAB and navigate to the `verification/` folder. Run `CRLB_verification.m
 </div>
 
 ### Symbolic High-Order Lie-Group Differentiation
-Open MATLAB and navigate to the `verification/` folder. Run `Lie_differentiation.m` to verify the differentiation accuracy. Using
-
-$$\frac{\mathrm{d} \ \mathrm{tr} \left( {AX}^k \right)}{\mathrm{d} {X}} = \sum \limits_{i = 0}^{k - 1} {X}^i {A} {X}^{k-i-1}, \ k \in \mathbb{Z}^+$$
+Open MATLAB and navigate to the `verification/` folder. Run `Lie_differentiation.m` to verify the differentiation accuracy. Using $$\frac{\mathrm{d} \ \mathrm{tr} \left( {AX}^k \right)}{\mathrm{d} {X}} = \sum \limits_{i = 0}^{k - 1} {X}^i {A} {X}^{k-i-1}, \ k \in \mathbb{Z}^+$$
 which leads to
 
 <div align="center">
-    <img src="c3p_README/diff.png" width="70%" alt="">
+    <img src="c3p_README/diff.png" width="50%" alt="">
     <br>
 </div>
 
