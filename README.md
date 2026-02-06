@@ -73,7 +73,7 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 ---
 
 <div align="center">
-    <img src="c3p_README/tri-aruco.png" width="100%" alt="">
+    <img src="c3p_README/tri-aruco.png" width="70%" alt="">
     <br>
     <em>Precisely installed calibration patterns for ground-truth verification of calibration parameters.</em>
 </div>
@@ -99,8 +99,8 @@ make -j4
 The results are:
 
 <div align="center">
-    <img src="c3p_README/pem_axbycz_rot_err.jpg" width="100%" alt="">
-    <img src="c3p_README/pem_axbycz_trans_err.jpg" width="100%" alt="">
+    <img src="c3p_README/pem_axbycz_rot_err.jpg" width="70%" alt="">
+    <img src="c3p_README/pem_axbycz_trans_err.jpg" width="70%" alt="">
     <br>
     <em>Pose error characteristics of the Physical-Ensemble Method (PEM) for C3Ps.</em>
 </div>
