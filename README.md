@@ -71,7 +71,7 @@ The code has been tested on **macOS** and **Linux (Ubuntu)**.
 ---
 
 <div align="center">
-    <img src="c3p_README/tri_aruco.png" width="100%" alt="">
+    <img src="c3p_README/tri-aruco.png" width="100%" alt="">
     <br>
     <em>Precisely installed calibration patterns for ground-truth verification of calibration parameters.</em>
 </div>
