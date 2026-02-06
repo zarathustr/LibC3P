@@ -39,6 +39,8 @@ This covers scenarios from simple point cloud registration to complex multi-robo
 
 <div align="center">
     <img src="c3p_README/image-20260123152314904.png" width="40%" alt="Tri-camera Setup">
+    <img src="c3p_README/cam-calib.jpg" width="50%" alt="General Calibration">
+    <br>
     <img src="c3p_README/image-20260123152029998.png" width="50%" alt="AXBY=ZCWD Setup">
     <br>
     <em>Left: Tri-camera system (AX=YB variants). Right: Multi-sensor setup (AXBY=ZCWD).</em>
@@ -123,6 +125,13 @@ rosrun aruco_extrinsic_calib_c3p verify_axby_zcwd --calib calib-4cam-large/calib
 rosrun aruco_extrinsic_calib_c3p overlay_reprojection_zcwd_from_bag --bag 4cam-large-ust-nautilus-native-0000000000-2026-01-01-06-48-53.bag --calib calib-4cam-large/calib-camchain.yaml --xyzw_yaml out/estimated_XYZW.yaml --topics /sensors/cam0,/sensors/cam1,/sensors/cam2,/sensors/cam3 --image_mode raw --sync_tol 0.01 --sync_mode ref0 --out_dir out_reproj_zcwd --swap_rb
 ```
 
+The final reprojection errors are annotated as red boxes in the detection images:
+
+<div align="center">
+    <img src="c3p_README/4cam-large-nuc.png" width="100%" alt="">
+    <br>
+    <em>Reprojected markers in their original positions.</em>
+</div>
 
 ## MATLAB Scripts:
 
