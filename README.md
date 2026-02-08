@@ -209,9 +209,37 @@ python -m _scripts.run_c3p_se3_axb_ycz_autotight
 python -m _scripts.run_c3p_se3_axby_zcwd_autotight
 ```
 ## Logs:
-
+For $AX=XB$, $AX=YB$, $AXB=YCZ$ problems, there is no errors for problem solving. Howver, for $AXBY=ZCWD$ problem, the solver is quite slow and failed:
 ```
+46: -1.1803e-01 -1.1803e-01  2e-07  6e-13  1e-07  1e-09
+47: -1.1803e-01 -1.1803e-01  3e-07  3e-12  1e-06  1e-09
+48: -1.1803e-01 -1.1803e-01  1e-07  2e-12  6e-07  7e-10
+49: -1.1803e-01 -1.1803e-01  1e-07  3e-11  3e-05  8e-10
+50: -1.1803e-01 -1.1803e-01  7e-08  2e-11  1e-05  4e-10
+51: -1.1803e-01 -1.1803e-01  8e-08  2e-10  3e-04  4e-10
+52: -1.1803e-01 -1.1803e-01  3e-08  9e-11  1e-04  2e-10
+53: -1.1803e-01 -1.1803e-01  3e-08  9e-11  1e-04  2e-10
+54: -1.1803e-01 -1.1803e-01  2e-08  5e-11  8e-05  8e-11
+55: -1.1803e-01 -1.1803e-01  2e-08  1e-10  3e-04  8e-11
+56: -1.1803e-01 -1.1803e-01  9e-09  6e-11  2e-04  4e-11
+57: -1.1803e-01 -1.1803e-01  1e-08  6e-11  2e-04  4e-11
+58: -1.1803e-01 -1.1803e-01  5e-09  4e-11  1e-04  2e-11
+59: -1.1803e-01 -1.1803e-01  5e-09  4e-11  2e-04  2e-11
+60: -1.1803e-01 -1.1803e-01  4e-09  8e-11  4e-04  1e-11
+Terminated (singular KKT matrix).
+Warning: solver failed with message: infeasible / unknown: Solver 'CVXOPT' failed. Try another solver, or solve with verbose=True for more information.
+Maximum error: 7.355227538141662e-15
+no more variables to add
+/autocity/jinwu/.conda/constraint_learning/lib/python3.10/site-packages/cvxpy/problems/problem.py:173: UserWarning: Constraint #1 contains too many subexpressions. Consider vectorizing your CVXPY code to speed up compilation.
+  warnings.warn(f"Constraint #{i} contains too many subexpressions. "
+/autocity/jinwu/.conda/constraint_learning/lib/python3.10/site-packages/cvxpy/problems/problem.py:173: UserWarning: Constraint #2 contains too many subexpressions. Consider vectorizing your CVXPY code to speed up compilation.
+  warnings.warn(f"Constraint #{i} contains too many subexpressions. "
 
+===== Results =====
+
+real	9m15.702s
+user	83m46.056s
+sys	0m9.507s
 ```
 
 ## Conclusion:
