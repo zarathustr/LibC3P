@@ -209,7 +209,7 @@ python -m _scripts.run_c3p_se3_axb_ycz_autotight
 python -m _scripts.run_c3p_se3_axby_zcwd_autotight
 ```
 ## Logs:
-For $AX=XB$, $AX=YB$, $AXB=YCZ$ problems, there is no errors for problem solving. Howver, for $AXBY=ZCWD$ problem, the solver is quite slow and failed:
+For $AX=XB$, $AX=YB$, $AXB=YCZ$ problems, there is no errors for problem solving. However, for $AXBY=ZCWD$ problem, the AutoTight solver is quite slow and eventually failed:
 ```
 46: -1.1803e-01 -1.1803e-01  2e-07  6e-13  1e-07  1e-09
 47: -1.1803e-01 -1.1803e-01  3e-07  3e-12  1e-06  1e-09
